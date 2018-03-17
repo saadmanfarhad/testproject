@@ -12,7 +12,8 @@ exports.create = (req, res) =>{
       res.json({msg: 'Failed to create user'+ err});
     }
     else{
-      res.json({msg: 'User added successfully'});
+      console.log('User added successfully');
+      res.json(user);
     }
   })
 }

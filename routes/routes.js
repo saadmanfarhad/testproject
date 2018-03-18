@@ -6,6 +6,7 @@ const read = require('../controller/read');
 const update = require('../controller/update');
 const del = require('../controller/delete');
 
+router.get('/', (req, res)=> res.end('Hello world from server!'));
 router.post('/create', (req, res)=>{
   create.create(req, res);
 });

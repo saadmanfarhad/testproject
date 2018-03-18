@@ -20,7 +20,7 @@ mongoose.connection.on('error',(err)=>{
   }
 })
 
-const port = 3000;
+const port = 3100;
 
 app.use(cors());
 
@@ -29,11 +29,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname,'public')));
 
+
 app.use('/', routes);
 
 
 app.listen(port,()=>{
   console.log('Server started at port '+port);
-})
+});
 
 module.exports = app;

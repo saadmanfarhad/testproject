@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function AppCtrl($scope){
+  console.log("HELLO!!");
+=======
 function AppCtrl($scope, $http){
   console.log("Hello world from controller.");
 
@@ -19,4 +23,5 @@ function AppCtrl($scope, $http){
     });
   }
 
+>>>>>>> e20f059e51ebb495f8ee97eda98326324c3f5c0d
 }

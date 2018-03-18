@@ -23,4 +23,8 @@ router.delete('/delete/:id', (req, res)=>{
   del.delete(req, res);
 });
 
+router.get('/lol', (req,res) =>{
+  console.log("LOL Called");
+})
+
 module.exports = router;

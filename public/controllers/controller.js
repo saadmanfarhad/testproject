@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-function AppCtrl($scope){
-  console.log("HELLO!!");
-=======
 function AppCtrl($scope, $http){
   console.log("Hello world from controller.");
 
@@ -21,7 +17,30 @@ function AppCtrl($scope, $http){
       console.log(res);
       refresh();
     });
-  }
+  };
 
->>>>>>> e20f059e51ebb495f8ee97eda98326324c3f5c0d
+  $scope.remove = function(id){
+    console.log(id);
+    $http.delete('/delete/' + id).success(function(res){
+      refresh();
+    });
+  };
+
+  $scope.edit = function(id){
+    console.log(id);
+    $http.get('/read/'+id).success(function(res){
+      $scope.contact = res;
+    })
+  };
+
+  $scope.update = function(){
+    console.log($scope.contact._id);
+    $http.put('/update/'+ $scope.contact._id, $scope.contact).success(function(res){
+      refresh();
+    })
+  };
+
+  $scope.deselect = function(){
+    $scope.contact = "";
+  }
 }

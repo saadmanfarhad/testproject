@@ -15,6 +15,10 @@ router.get('/read', (req, res)=>{
   read.read(req, res);
 });
 
+router.get('/read/:id', (req, res)=>{
+  read.readUser(req, res);
+});
+
 router.put('/update/:id', (req, res)=>{
   update.update(req, res);
 });
